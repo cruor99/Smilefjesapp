@@ -1,0 +1,23 @@
+<ion-searchbar (ionInput)="getSmileys($event)"></ion-searchbar>
+<ion-list no-lines>
+    <ion-item *ngFor="let thingy of smileys">
+        <ion-card>
+
+            <ion-card-header>{{ thingy.navn }}</ion-card-header>
+            <ion-card-content>
+                <ion-list>
+                    <ion-item> {{ thingy.dato}}</ion-item>
+                    <ion-item>
+                        <div *ngIf="thingy.total_karakter == 0"><i class="material-icons">sentiment_very_satisfied</i></div>
+                        <div *ngIf="thingy.total_karakter == 1"><i class="material-icons">sentiment_very_satisfied</i></div>
+                        <div *ngIf="thingy.total_karakter == 2"><i class="material-icons">sentiment_neutral</i></div>
+                        <div *ngIf="thingy.total_karakter == 3"><i class="material-icons">sentiment_neutral</i></div>
+                        <div *ngIf="thingy.total_karakter == 4"><i class="material-icons">sentiment_dissatisfied</i></div>
+                        <div *ngIf="thingy.total_karakter == 5"><i class="material-icons">sentiment_dissatisfied</i></div>
+                    </ion-item>
+                    <ion-item>{{ thingy.adrlinje1 }}</ion-item>
+                </ion-list>
+            </ion-card-content>
+        </ion-card>
+    </ion-item>
+</ion-list>
