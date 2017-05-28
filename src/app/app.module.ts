@@ -7,13 +7,19 @@ import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { DetailsPage } from '../pages/details/details'
+import { AboutPage } from '../pages/about/about'
 import { SmileysComponent } from './smileys/smileys.component'
+import { SmileysDetailComponent } from './smileys/smileysdetail.component'
 
 @NgModule({
   declarations: [
     MyApp,
       HomePage,
-      SmileysComponent
+      SmileysComponent,
+      DetailsPage,
+      AboutPage,
+      SmileysDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +29,9 @@ import { SmileysComponent } from './smileys/smileys.component'
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+      HomePage,
+      DetailsPage,
+      AboutPage
   ],
   providers: [
     StatusBar,

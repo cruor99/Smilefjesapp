@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core'
+import { NavController } from 'ionic-angular'
+import { DetailsPage } from '../../pages/details/details'
 import { SmileysService } from './smileys.service'
 
 import { Smileys } from './smileys'
@@ -9,8 +11,9 @@ import { Smileys } from './smileys'
 })
 export class SmileysComponent implements OnInit {
     smileys: Smileys[];
+    selectedsmiley: Smileys
 
-    constructor(private smileysService: SmileysService){
+    constructor(private smileysService: SmileysService, public navCtrl: NavController){
     }
 
     ngOnInit(){
@@ -27,5 +30,11 @@ export class SmileysComponent implements OnInit {
         this.smileysService.getSmileys(val)
             .subscribe(
                 smileys => this.smileys = smileys);
+    }
+
+    onSelect(smiley: Smileys): void {
+        console.log(smiley)
+        this.selectedsmiley = smiley;
+        this.navCtrl.push(DetailsPage, {smiley: smiley});
     }
 }

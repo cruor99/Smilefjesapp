@@ -1,0 +1,79 @@
+<ion-card>
+    <ion-card-header>{{ thingy.navn }}</ion-card-header>
+    <ion-card-content>
+        <ion-list>
+            <ion-item-group>
+                <ion-item> {{ thingy.dato}}</ion-item>
+                <ion-item>
+                    <div *ngIf="thingy.total_karakter == 0"><i class="material-icons">sentiment_very_satisfied</i></div>
+                    <div *ngIf="thingy.total_karakter == 1"><i class="material-icons">sentiment_very_satisfied</i></div>
+                    <div *ngIf="thingy.total_karakter == 2"><i class="material-icons">sentiment_neutral</i></div>
+                    <div *ngIf="thingy.total_karakter == 3"><i class="material-icons">sentiment_neutral</i></div>
+                    <div *ngIf="thingy.total_karakter == 4"><i class="material-icons">sentiment_dissatisfied</i></div>
+                    <div *ngIf="thingy.total_karakter == 5"><i class="material-icons">sentiment_dissatisfied</i></div>
+                </ion-item>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-item-divider color="light">Addresse</ion-item-divider>
+                <ion-item>{{ thingy.adrlinje1 }}</ion-item>
+                <ion-item>
+                    <ion-label>Postnummer</ion-label>
+                    <ion-label> {{thingy.postnr}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Poststed</ion-label>
+                    <ion-label> {{thingy.poststed}}</ion-label>
+                </ion-item>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-item-divider color="light">Rapport Detaljer</ion-item-divider>
+                <ion-item>
+                    <ion-label>Tilsyns ID</ion-label>
+                    <ion-label> {{thingy.tilsynid}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Saks Referanse</ion-label>
+                    <ion-label> {{thingy.sakref}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Status</ion-label>
+                    <ion-label> {{thingy.status}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Tilsynsbes&oslash;kstype</ion-label>
+                    <ion-label> {{thingy.tilsynsbesoektype}}</ion-label>
+                </ion-item>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-item-divider color="light">
+                    {{thingy.tema1_no}}
+                </ion-item-divider>
+                <ion-item>
+                    <ion-label>Karakter</ion-label>
+                    <ion-label> {{thingy.karakter1}}</ion-label>
+                </ion-item>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-item-divider color="light">{{thingy.tema2_no}}</ion-item-divider>
+                <ion-item>
+                    <ion-label>Karakter</ion-label>
+                    <ion-label> {{thingy.karakter2}}</ion-label>
+                </ion-item>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-item-divider color="light">{{thingy.tema3_no}}</ion-item-divider>
+                <ion-item>
+                    <ion-label>Karakter</ion-label>
+                    <ion-label> {{thingy.karakter3}}</ion-label>
+                </ion-item>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-item-divider color="light">{{thingy.tema4_no}}</ion-item-divider>
+                <ion-item>
+                    <ion-label>Karakter</ion-label>
+                    <ion-label> {{thingy.karakter4}}</ion-label>
+                </ion-item>
+            </ion-item-group>
+
+        </ion-list>
+    </ion-card-content>

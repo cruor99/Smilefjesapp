@@ -1,15 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+        Smilefjes og Spisested
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+      Her finner du en s&oslash;kbar liste av spisesteder og opp til tre av deres tidligere tilsynsrapporter
+  </p>
+  <p>
+      Total karakter mellom 0 og 1 = <i class="material-icons" >sentiment_very_satisfied</i><br/>
+      Total karakter mellom 2 og 3 = <i class="material-icons" >sentiment_neutral</i><br/>
+      Total karakter mellom 4 og 5 = <i class="material-icons" >sentiment_dissatisfied</i><br/>
+  </p>
+  <p>
+      Finn ut mer om appen <a (click)="gotoDetails()">her</a>
   </p>
   <smilelist></smilelist>
 </ion-content>

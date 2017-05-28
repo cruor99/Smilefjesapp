@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Spisested og Smilefjes</name>
-    <description>En app for å søke i mattilsynets system for smilefjes</description>
+    <description>En app for å søke i mattilsynets resultater av tilsyn av spisesteder. I smilefjes format!</description>
     <author email="kliknes@gmail.com" href="http://github.com/cruor99">Kjetil Andre Liknes</author>
     <content src="index.html" />
     <access origin="*" />
