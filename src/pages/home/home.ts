@@ -14,7 +14,6 @@ export class HomePage {
   }
 
     gotoDetails(): void{
-        console.log("Entered Details")
         this.navCtrl.push(AboutPage);
     }
 

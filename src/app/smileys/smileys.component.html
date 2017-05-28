@@ -1,6 +1,17 @@
 <ion-searchbar (ionInput)="getSmileys($event)"></ion-searchbar>
-<ion-list no-lines>
-    <ion-item *ngFor="let thingy of smileys" (click)="onSelect(thingy)">
+<span *ngIf="smileys">
+    <button *ngIf="smileys.page != 1" ion-button icon-left small style="float: left;" (click)="getPreviousSmileyPage(smileys.page)">
+        <ion-icon name="arrow-back" ></ion-icon>
+        Forrige side
+    </button>
+    <ion-label style="float: left;"> Side: {{ smileys.page }} av {{ smileys.pages }} </ion-label>
+    <button *ngIf="smileys.page != smileys.pages" ion-button icon-right small style="float: left;" (click)="getNextSmileyPage(smileys.page)">
+        Neste side
+        <ion-icon name="arrow-forward" ></ion-icon>
+    </button>
+</span>
+<ion-list no-lines *ngIf="smileys">
+    <ion-item *ngFor="let thingy of smileys.entries" (click)="onSelect(thingy)">
         <ion-card>
 
             <ion-card-header>{{ thingy.navn }}</ion-card-header>
@@ -21,3 +32,14 @@
         </ion-card>
     </ion-item>
 </ion-list>
+<span *ngIf="smileys">
+    <button *ngIf="smileys.page != 1" ion-button icon-left small style="float: left;" (click)="getPreviousSmileyPage(smileys.page)">
+        <ion-icon name="arrow-back" ></ion-icon>
+        Forrige side
+    </button>
+    <ion-label style="float: left;"> Side: {{ smileys.page }} av {{ smileys.pages }} </ion-label>
+    <button *ngIf="smileys.page != smileys.pages" ion-button icon-right small style="float: left;" (click)="getNextSmileyPage(smileys.page)">
+        Neste side
+        <ion-icon name="arrow-forward" ></ion-icon>
+    </button>
+</span>

@@ -27,7 +27,7 @@ export class SmileysService{
             let newdato = new Date(dato[2]+dato[3], Number(dato[1])-1, dato[0]).toDateString();
             entry.dato = newdato
         }
-        return body["entries"] || { };
+        return body || { };
     }
 
     private handleError(error: Response | any){

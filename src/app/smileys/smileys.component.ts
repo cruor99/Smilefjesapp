@@ -10,8 +10,9 @@ import { Smileys } from './smileys'
     providers: [SmileysService]
 })
 export class SmileysComponent implements OnInit {
-    smileys: Smileys[];
+    smileys;
     selectedsmiley: Smileys
+    previousquery: string;
 
     constructor(private smileysService: SmileysService, public navCtrl: NavController){
     }
@@ -20,20 +21,48 @@ export class SmileysComponent implements OnInit {
         this.getSmileys("");
     }
 
+    getPreviousSmileyPage(pagenum: string): void{
+        let finalnum = Number(pagenum)-1;
+        if (this.previousquery.indexOf("&page=") >= 0){
+            var querystring = this.previousquery.replace(/\&page\=[0-9]+/, '&page='+finalnum.toString())
+        } else{
+            var querystring = this.previousquery+"&page="+finalnum.toString()
+        }
+
+        this.getSmileys(querystring);
+    }
+
+    getNextSmileyPage(pagenum: string): void{
+        let finalnum = Number(pagenum)+1;
+        if (this.previousquery.indexOf("&page=") >= 0){
+            var querystring = this.previousquery.replace(/\&page\=[0-9]+/, '&page='+finalnum.toString())
+        } else{
+            var querystring = this.previousquery+"&page="+finalnum.toString()
+        }
+
+        this.getSmileys(querystring)
+    }
+
     getSmileys(query: any){
         let val: string
-        if (query == ""){
-            val = query
-        } else {
+        try {
+            if (query == ""){
+                val = query
+            } else if(query.indexOf("&page") >=0 ){
+                val = query
+            } else {
+                val = query.target.value
+            }
+        } catch(e){
             val = query.target.value
         }
+        this.previousquery = val;
         this.smileysService.getSmileys(val)
             .subscribe(
                 smileys => this.smileys = smileys);
     }
 
     onSelect(smiley: Smileys): void {
-        console.log(smiley)
         this.selectedsmiley = smiley;
         this.navCtrl.push(DetailsPage, {smiley: smiley});
     }
