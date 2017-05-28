@@ -17,8 +17,11 @@ Forskriften gjelder for serveringssteder som er allment tilgjengelige og som til
 ### § 3. Smilefjesrapporten
 
 Smilefjesrapporten er en standardisert skriftlig rapport som skal gi forbrukerne tilrettelagt informasjon, der resultatet av det gjennomf&oslash;rte tilsynet er uttrykt ved ett av tre mulige smilefjessymboler.
+
 a) ![smilefjes-god](https://lovdata.no/static/SF/sf-20150925-1141-01-01.jpg?timestamp=1493715427000): Mattilsynet har ikke funnet brudd p&aring; regelverket eller har bare funnet bagatellmessige brudd p&aring; regelverket og p&aring;pekt dette.
+
 b) ![smilefjes-neutral](https://lovdata.no/static/SF/sf-20150925-1141-02-01.jpg?timestamp=1493715427000): Mattilsynet har funnet brudd p&aring; regelverket og gitt forh&aring;ndsvarsel eller fattet n&oslash;dvendige vedtak.
+
 c) ![smilefjes-sur](https://lovdata.no/static/SF/sf-20150925-1141-03-01.jpg?timestamp=1493715427000): Mattilsynet har funnet alvorlige eller gjentatte brudd p&aring; regelverket og gitt forh&aring;ndsvarsel eller fattet n&oslash;dvendige vedtak.
 
 Smilefjesrapporten inneholder i tillegg informasjon om hva som er kontrollert og hvilke funn som er gjort samt smilefjessymbolene fra inntil tre tidligere tilsyn. Smilefjesrapporten kommer i tillegg til den ordin&aelig;re tilsynsrapporten.
@@ -30,4 +33,5 @@ Serveringsstedet skal henge opp smilefjesrapporten straks Mattilsynet har levert
 ### § 5.Publisering
 
 Mattilsynet skal publisere tilsynsresultatene digitalt innen fem virkedager etter gjennomf&oslash;rt tilsyn.
+
 App laget av Kjetil Andre Liknes
